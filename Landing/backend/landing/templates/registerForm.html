@@ -1,0 +1,76 @@
+{% extends 'layout.html' %}
+{% block content %}
+    {% if messages %}
+        <div class="alert alert-danger" role="alert">
+            {% for message in messages %}<b>{{ message }}</b>{% endfor %}
+        </div>
+    {% endif %}
+    <form action="register" method="post">
+        {% csrf_token %}
+        <div style="margin-top:65px;" class="container py-5 h-50">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+                            <h2 class="mb-5">Sign Up</h2>
+                            <div align="left" class="form-outline mb-4">
+                                <label class="form-label" for="">Username</label>
+                                <input type="text"
+                                       id="typeUsernameX-2"
+                                       class="form-control form-control-lg"
+                                       name="username"/>
+                            </div>
+                            <div align="left" class="form-outline mb-4">
+                                <label class="form-label" for="typeTextX-2">Firstname</label>
+                                <input type="text"
+                                       id="typeTextX-2"
+                                       class="form-control form-control-lg"
+                                       name="firstname"/>
+                            </div>
+                            <div align="left" class="form-outline mb-4">
+                                <label class="form-label" for="typeTextX-2">Lastname</label>
+                                <input type="text"
+                                       id="typeTextX-2"
+                                       class="form-control form-control-lg"
+                                       name="lastname"/>
+                            </div>
+                            <div align="left" class="form-outline mb-4">
+                                <label class="form-label" for="typeEmailX-2">E-mail</label>
+                                <input type="email"
+                                       id="typeEmailX-2"
+                                       class="form-control form-control-lg"
+                                       name="email"/>
+                            </div>
+                            <div align="left" class="form-outline mb-4">
+                                <label class="form-label" for="typePasswordX-2">Password</label>
+                                <input type="password"
+                                       id="typePasswordX-2"
+                                       class="form-control form-control-lg"
+                                       name="password"/>
+                            </div>
+                            <div align="left" class="form-outline mb-4">
+                                <label class="form-label" for="typePasswordX-2">Re-Password</label>
+                                <input type="password"
+                                       id="typePasswordX-2"
+                                       class="form-control form-control-lg"
+                                       name="repassword"/>
+                            </div>
+                            <br>
+                            <div align="center" class="form-outline mb-4">
+                                <button class="btn btn-primary btn-lg btn-block"
+                                        style="width:200px"
+                                        type="submit">Sign Up Now!</button>
+                            </div>
+                            <hr class="my-4">
+                            
+                                    <br>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    {% include "footer.html" %}
+{% endblock %}

@@ -1,0 +1,176 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-01 13:51+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: backend/urls.py:13
+msgid "admin/"
+msgstr ""
+
+#: landing/templates/footer.html:38 landing/templates/index.html:112
+msgid "Contact Us"
+msgstr ""
+
+#: landing/templates/index.html:23
+msgid "Our News and Release"
+msgstr ""
+
+#: landing/templates/index.html:25
+msgid "See more"
+msgstr ""
+
+#: landing/templates/index.html:33 landing/templates/news.html:36
+msgid "View News"
+msgstr ""
+
+#: landing/templates/index.html:48 landing/templates/news.html:50
+msgid "  404 Not Found, not any news. Please try add data news."
+msgstr ""
+
+#: landing/templates/index.html:52
+msgid "Superset 1"
+msgstr ""
+
+#: landing/templates/index.html:57
+msgid "Superset 2"
+msgstr ""
+
+#: landing/templates/index.html:61
+msgid "Lorem Ipsum"
+msgstr ""
+
+#: landing/templates/index.html:61 landing/templates/knowledge.html:7
+#: landing/templates/knowledge.html:22
+msgid ""
+"Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+"Lorem Ipsum has been the industry's standard dummy text ever since the "
+"1500s, when an unknown printer took a galley of type and scrambled it to "
+"make a type specimen book. It has survived not only five centuries, but also "
+"the leap into electronic typesetting."
+msgstr ""
+
+#: landing/templates/index.html:67
+msgid "Help we know what you want?"
+msgstr ""
+
+#: landing/templates/index.html:76
+msgid "Find Data"
+msgstr ""
+
+#: landing/templates/index.html:88
+msgid "Explore"
+msgstr ""
+
+#: landing/templates/index.html:100
+msgid "Find Skill"
+msgstr ""
+
+#: landing/templates/knowledge.html:5
+msgid "Explore our Data Governance Platform"
+msgstr ""
+
+#: landing/templates/knowledge.html:17
+msgid "Find More Governance Platform"
+msgstr ""
+
+#: landing/templates/knowledge.html:20
+msgid "Explore our Knowledge Graph"
+msgstr ""
+
+#: landing/templates/knowledge.html:31
+msgid "Find more Knowledge Graph"
+msgstr ""
+
+#: landing/templates/layout.html:79 landing/templates/layout.html:119
+#: landing/templates/layout.html:121 landing/templates/layout.html:185
+#: landing/templates/newsDetail.html:12
+msgid "Home"
+msgstr ""
+
+#: landing/templates/layout.html:84 landing/templates/layout.html:189
+msgid "Knowledge"
+msgstr ""
+
+#: landing/templates/layout.html:84 landing/templates/layout.html:189
+msgid "Graph"
+msgstr ""
+
+#: landing/templates/layout.html:88 landing/templates/layout.html:193
+msgid "Data"
+msgstr ""
+
+#: landing/templates/layout.html:88 landing/templates/layout.html:193
+msgid "Discovery"
+msgstr ""
+
+#: landing/templates/layout.html:93 landing/templates/layout.html:198
+msgid "Workflow"
+msgstr ""
+
+#: landing/templates/layout.html:97 landing/templates/layout.html:202
+msgid "Superset"
+msgstr ""
+
+#: landing/templates/layout.html:126 landing/templates/layout.html:128
+#: landing/templates/news.html:22
+msgid "News"
+msgstr ""
+
+#: landing/templates/layout.html:133 landing/templates/layout.html:135
+msgid "Knowledge Graph"
+msgstr ""
+
+#: landing/templates/layout.html:141 landing/templates/layout.html:143
+msgid "+Add News"
+msgstr ""
+
+#: landing/templates/layout.html:150
+msgid "English"
+msgstr ""
+
+#: landing/templates/layout.html:219
+msgid "Logout"
+msgstr ""
+
+#: landing/templates/layout.html:225 landing/templates/layout.html:227
+msgid "Login/Sign Up"
+msgstr ""
+
+#: landing/templates/loginForm.html:20 landing/templates/loginForm.html:34
+msgid "Login"
+msgstr ""
+
+#: landing/templates/loginForm.html:23
+msgid "Username"
+msgstr ""
+
+#: landing/templates/loginForm.html:29
+msgid "Password"
+msgstr ""
+
+#: landing/templates/loginForm.html:38
+msgid "Not a member?"
+msgstr ""
+
+#: landing/templates/loginForm.html:39
+msgid "Sign Up"
+msgstr ""
+
+#: landing/templates/newsDetail.html:13
+msgid "News Zone"
+msgstr ""

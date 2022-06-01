@@ -1,0 +1,124 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+{% load i18n %}
+<div class="header-index" align="center">
+
+  <img class="bg-orange" align="Center" alt="econ" src="{% static 'images_home/BG - Header - Orange.png' %}">
+  <img class="bg-head" align="Center"  alt="econ" src="{% static 'images_home/BG - Header - Blue.png' %}">
+  <div>
+    <div class="centered-top"> ECON TU</div>
+    <div class="centered-top-anl">ANALYTICS</div>
+  </div>
+</div>
+{% if messages %}
+<div class="alert alert-success" role="alert">
+    {% for message in messages %}
+        <b>{{message}}</b>
+    {% endfor %}
+</div>
+{% endif %}
+<div class="container">
+  <div class="news-content">
+    <h3 align="center">{% trans "Our News and Release" %}</h3>
+    <div class="see" align="Right">
+      <a class="btn" href="{% url 'news' %}">{% trans "See more" %} <img class="see-more" src="{% static 'images_home/Icon - Next - Orange.png' %}" alt="more" /></a>
+    </div>
+  <div class="content-card-news" align="Center">
+    {% if newss %} {% for news in newss %}
+    <div class="card_news">
+      <div class="card-img" style="background-image:url({{news.image.url}});">
+        <div class="overlay">
+          <div class="overlay-content">
+            <a data-news="{{ news.id }}"  class="hover" href="{% url 'newsDetail' news.id %}">{% trans "View News" %}</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-content">
+        <a href="{% url 'newsDetail' news.id %}">
+          <h2>{{ news.title }}</h2>
+          <p>{{ news.descriptions|safe|truncatechars:50 }}</p>
+        </a>
+        <img class="bg-card-orange" src="{% static 'images_home/BG - News - WhiteOrange.png' %}" alt="more" />
+        <a href="{% url 'newsDetail' news.id %}"> <p class="read-more" >อ่านเพิ่มเติม <img class="read-more" src="{% static "images_home/Icon - Next - White.png"%}" alt="next"></p> </a>
+      </div>
+    </div>
+    {% endfor %} {% else %} 
+  </div>
+    <h1 align="Center">{% trans "  404 Not Found, not any news. Please try add data news." %}</h1>
+    {% endif %}
+    <br><br><br>
+    <div class="content-superset" align="center">
+      <h3 >{% trans "Superset 1" %}</h3><br><br>
+      <img class="superset-1" align="center" alt="footer_econ" src="{% static 'images_home/PIcture - Superset - 01.jpg' %}">
+        <br><br>
+      </div>
+      <div >
+        <h3 align="Center">{% trans "Superset 2" %}</h3>
+        <img align="center"style="max-width:100%;max-height:100%;height:calc(80px + (650 - 80 ) * ((100vw - 100px) / (1920 - 100)));" alt="footer_econ" src="{% static 'images_home/PIcture - Superset - 02.png' %}">
+        <div>
+        <br>
+        <p align="Left" class="superset2"> <strong>{% trans "Lorem Ipsum" %}</strong> <br><br> {% trans "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting." %}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <h3 class="help-we" align="center"> {% trans "Help we know what you want?" %}</h3>
+
+<div class="footer-app3" align="center">
+    {% comment %} Card 1 {% endcomment %}
+    <div class="card_news app3">
+      <div class="card-img all-app"><img class="bg-all-app" src="{% static 'images_home/whiteIcon01.png' %}" alt="img">
+        <div class="overlay" >
+          <div class="overlay-content">
+            <a class="hover" href="{% url 'index' %}">{% trans "Find Data" %}</a>
+          </div>
+        </div>
+        <h2 class="word-all-app">Find Data</h2>
+      </div>
+    </div>
+  {% comment %} Card 2 {% endcomment %}
+    <div class="card_news app3">
+      <div class="card-img all-app"><img class="bg-all-app" src="{% static 'images_home/whiteIcon02.png' %}" alt="img">
+        <div class="overlay" >
+          <div class="overlay-content">
+            <a class="hover" href="{% url 'index' %}">{% trans "Explore" %}</a>
+          </div>
+        </div>
+        <h2 class="word-all-app">Explore Knowledge <br> Graph</h2>
+      </div>
+    </div>
+  {% comment %} Card 3 {% endcomment %}
+    <div class="card_news app3">
+      <div class="card-img all-app"><img class="bg-all-app" src="{% static 'images_home/whiteIcon03.png' %}" alt="img">
+        <div class="overlay" >
+          <div class="overlay-content">
+            <a class="hover" href="{% url 'index' %}">{% trans "Find Skill" %}</a>
+          </div>
+        </div>
+        <h2 class="word-all-app">Find your <br> skill strategy</h2>
+      </div>
+    </div>
+    <br>
+    
+    {% comment %} footer {% endcomment %}
+
+    <div id="social-p">
+      {% trans "Contact Us" %}
+    </div>
+
+    <a id="social-footer"
+      class="btn fab fa-facebook so-style"
+      href="https://web.facebook.com/ECONTUofficial/?_rdc=1&_rdr"></a>
+  </div>
+    <img align="Center" 
+    id = "footer-img-orange-h"
+    class = "img-foot-orange"
+    alt="econ" 
+    src="{% static 'images_home/BG - Footer - Orange.png' %}">
+
+    <img id="footer-img" class="img-foot-bf" align="Center" alt="econ" src="{% static 'images_home/BG - Footer.png' %}">
+  </div>
+</div>
+{% endblock %}

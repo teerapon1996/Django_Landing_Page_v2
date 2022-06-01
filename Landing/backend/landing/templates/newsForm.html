@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="container py-5 h-50">
+        <div align="center" class="row d-flex justify-content-center align-items-center h-100" style="margin-top: 65px;">
+                <div style="width: fit-content;" class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div style="width: 930px;" class="card-body p-5 text-center">
+                        <h2 class="mb-5">Add News</h2>
+
+                        {% comment %} <div align="left" class="form-outline mb-4">
+                            <label class="form-label" for="">Title News</label>
+                            <input type="text"
+
+                                   class="form-control form-control-lg"
+                                   name="title_name"/>
+                        </div> {% endcomment %}
+                        <div align="left" class="form-outline mb-4">
+                            {% comment %} <label class="form-label" for="typeTextX-2">Description</label> {% endcomment %}
+                                {{form.media}}
+                                {{form.as_p}}
+                        </div>
+                        {% comment %} <div align="left" class="form-outline mb-4">
+                            <label for="img">Upload your Image:</label>
+                            <input type="file" 
+                                    id="img" 
+                                    name="image" 
+                                    accept="image/*">
+                            
+                        </div> {% endcomment %}
+                        <br>
+                        <div align="center" class="form-outline mb-4">
+                            <button class="btn btn-primary btn-lg btn-block"
+                                    style="width:200px;background-color:#2C5A74!important;color:white!important;border-radius: 20px!important;"
+                                    type="submit" value="Upload">Add Now!</button>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+{% include "footer.html" %}
+{% endblock %}

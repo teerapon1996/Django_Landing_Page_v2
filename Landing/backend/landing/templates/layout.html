@@ -1,0 +1,231 @@
+{% load static %} {% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Econ TU</title>
+    <link rel="stylesheet" href="fonts/thsarabunnew.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+    {% comment %} Icon {% endcomment %}
+    <script
+      src="https://kit.fontawesome.com/1d397e72d2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    {% comment %} static {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}" />
+    <link rel="stylesheet" href="{% static 'js/styles.js'%}" />
+    {% comment %} JQuery {% endcomment %}
+    
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light nav-econ">
+      <a class="navbar-brand nav-img-logo" href="{% url 'index' %}">
+        <img width="100" src="{% static 'images_home/Logo - Econ - Forweb.png' %}" alt="Logo" />
+      </a>
+      {% comment %} responsive app drop {% endcomment %}
+      <div>
+        <button
+          id="app-drop"
+          role="button"
+          type="button"
+          data-toggle="dropdown"
+          class="btn"
+        >
+          <img src="{% static 'images/app_drop.svg' %}" alt="app" />
+        </button>
+        <div
+          id="app-card"
+          class="dropdown-menu nav-app-all"
+          aria-labelledby="dropdownMenuButton"
+          >
+          <a id="card-app" class="btn card" href="{% url 'index' %}">
+            <i class="ii fas fa-house i-home"></i>
+            <h6 align="center">{% trans "Home" %}</h6>
+          </a>
+          <a id="card-app" class="btn card" href="https://knowledgegraph.analytics.econ.tu.ac.th/">
+            <br />
+            <i class="ii fas fa-bezier-curve i-curve"></i>
+            <h6 align="center">{% trans "Knowledge" %}<br />{% trans "Graph" %}</h6>
+          </a>
+          <a id="card-app" class="btn card" href="#">
+            <br /><i class="ii fas fa-database i-database"></i>
+            <h6 align="center">{% trans "Data" %}<br />{% trans "Discovery" %}</h6>
+          </a>
+          {% if user.is_superuser %}
+          <a id="card-app" class="btn card" href="#">
+            <i class="ii fas fa-laptop i-work"></i>
+            <h6 align="center">{% trans "Workflow" %}</h6>
+          </a>
+          <a id="card-app" class="btn card" href="#">
+            <i class="ii fas fa-infinity i-supset"></i>
+            <h6 align="center">{% trans "Superset" %}</h6>
+          </a>
+          {% endif %}
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      {% comment %} Navbar {% endcomment %}
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            {% if page == "index" %}
+            <a id="hover-nav" class="nav-link nav-btn-home active" href="{% url 'index' %}">{% trans "Home" %}</a>
+            {% else %}
+            <a id="hover-nav" class="nav-link nav-btn-home" href="{% url 'index' %}">{% trans "Home" %}</a>
+            {% endif %}
+          </li>
+          <li class="nav-item">
+            {% if page == "news" %}
+            <a id="hover-nav" class="nav-link nav-btn-news active" href="{% url 'news' %}">{% trans "News" %}</a>
+            {% else %}
+            <a id="hover-nav" class="nav-link nav-btn-news" href="{% url 'news' %}">{% trans "News" %}</a>
+            {% endif %}
+          </li>
+          <li class="nav-item">
+            {% if page == "knowledge" %}
+            <a id="hover-nav" class="nav-link nav-btn-klg active" href="{% url 'knowledge' %}">{% trans "Knowledge Graph" %}</a>
+            {% else %}
+            <a id="hover-nav" class="nav-link nav-btn-klg" href="{% url 'knowledge' %}">{% trans "Knowledge Graph" %}</a>
+            {% endif %}
+          </li>
+          {% if user.is_superuser %}
+          <li class="nav-item">
+            {% if page == "newsForm" %}
+            <a id="hover-nav" class="nav-link nav-btn-addnews active" href="{% url 'newsForm' %}">{% trans "+Add News" %}</a>
+            {% else %}
+            <a id="hover-nav" class="nav-link nav-btn-addnews" href="{% url 'newsForm' %}">{% trans "+Add News" %}</a>
+            {% endif %}
+          </li>
+          {% endif %}
+        </ul>
+        <div>
+            <button class="btn btn-secondary dropdown-toggle btn-change-language" type="button" data-toggle="dropdown" aria-expanded="false">
+              {% trans "English" %}
+            </button>
+            <div class="dropdown-menu" style="width: 150px!important;right: 180px!important;" aria-labelledby="dropdownMenuButton">
+              {% get_current_language as LANGUAGE_CODE %}
+              {% get_available_languages as LANGUAGES %}
+              {% get_language_info_list for LANGUAGES as languages %}
+              {% for lang in languages %}
+                <a class="dropdown-item" href="/{{lang.code}}/">
+                  {% if lang.code == 'en' %}
+                  <img width="20" height="20" src="{% static 'language/en.png' %}" alt="lang"> 
+                  {% else %}
+                  <img width="20" height="20" src="{% static 'language/th.png' %}" alt="lang"> 
+                  {% endif %}
+                  {{ lang.name_local }}
+                </a>
+            {% endfor %}
+            </div>
+          </div>
+          <div>
+          <button
+            id="app-drop2"
+            style="margin-right: 20px;"
+            role="button"
+            type="button"
+            data-toggle="dropdown"
+            class="btn"
+          >
+            <img src="{% static 'images/app_drop.svg' %}" alt="app" />
+          </button>
+          <div
+            id="app-card2"
+            class="dropdown-menu nav-app-all"
+            aria-labelledby="dropdownMenuButton"
+          >
+            <a id="card-app" class="btn card" href="{% url 'index' %}">
+              <i class="ii fas fa-house i-home"></i>
+              <h6 align="center">{% trans "Home" %}</h6>
+            </a>
+            <a id="card-app" class="btn card" href="https://knowledgegraph.analytics.econ.tu.ac.th/">
+              <br /><i class="ii fas fa-bezier-curve i-curve"></i>
+              <h6 align="center">{% trans "Knowledge" %}<br />{% trans "Graph" %}</h6>
+            </a>
+            <a id="card-app" class="btn card" href="#">
+              <br /><i class="ii fas fa-database i-database"></i>
+              <h6 align="center">{% trans "Data" %}<br />{% trans "Discovery" %}</h6>
+            </a>
+            {% if user.is_superuser %}
+            <a id="card-app" class="btn card" href="#">
+              <i class="ii fas fa-laptop i-work"></i>
+              <h6 align="center">{% trans "Workflow" %}</h6>
+            </a>
+            <a id="card-app" class="btn card" href="#">
+              <i class="ii fas fa-infinity i-supset"></i>
+              <h6 align="center">{% trans "Superset" %}</h6>
+            </a>
+            {% endif %}
+          </div>
+        </li>
+      </div>
+        {% if user.is_authenticated %}
+        <form
+          class="nav-item form-inline my-2 my-lg-0"
+          method="post"
+          action="{% url 'log_out' %}"
+        >
+          {% csrf_token %}
+          <button
+            class="nav-link btn collapse2 log-out-style"
+            type="submit"
+          >
+          {% trans "Logout" %}
+          </button>
+        </form>
+        {% else %}
+        
+          {% if page == "loginForm" %}
+            <a id="hover-nav" class="nav-link nav-btn-login active" href="{% url 'loginForm' %}">{% trans "Login/Sign Up" %}</a>
+            {% else %}
+            <a id="hover-nav" class="nav-link nav-btn-login" style="color:white!important;" href="{% url 'loginForm' %}">{% trans "Login/Sign Up" %}</a>
+            {% endif %}
+        </li>
+        {% endif %}
+      </div>
+    </nav>
+    {% block content %}{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,216 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-06-01 13:51+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: backend/urls.py:13
+msgid "admin/"
+msgstr ""
+
+#: landing/templates/footer.html:38 landing/templates/index.html:112
+msgid "Contact Us"
+msgstr "ติดต่อเรา"
+
+#: landing/templates/index.html:23
+msgid "Our News and Release"
+msgstr "ข่าวสารและประชาสัมพันธ์"
+
+#: landing/templates/index.html:25
+msgid "See more"
+msgstr "ดูเพิ่มเติม"
+
+#: landing/templates/index.html:33 landing/templates/news.html:36
+msgid "View News"
+msgstr "ดูข่าว"
+
+#: landing/templates/index.html:48 landing/templates/news.html:50
+#, fuzzy
+#| msgid "  Oops, not any news. Please try add data news."
+msgid "  404 Not Found, not any news. Please try add data news."
+msgstr "  404 ไม่พบข้อมูล, ไม่มีข่าวใดๆเลย โปรดลองเพิ่มข้อมูลข่าว"
+
+#: landing/templates/index.html:52
+msgid "Superset 1"
+msgstr ""
+
+#: landing/templates/index.html:57
+msgid "Superset 2"
+msgstr ""
+
+#: landing/templates/index.html:61
+msgid "Lorem Ipsum"
+msgstr "ลอเรม อิปซัม"
+
+#: landing/templates/index.html:61 landing/templates/knowledge.html:7
+#: landing/templates/knowledge.html:22
+msgid ""
+"Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+"Lorem Ipsum has been the industry's standard dummy text ever since the "
+"1500s, when an unknown printer took a galley of type and scrambled it to "
+"make a type specimen book. It has survived not only five centuries, but also "
+"the leap into electronic typesetting."
+msgstr ""
+"เป็นเพียงข้อความจำลองของอุตสาหกรรมการพิมพ์และการเรียงพิมพ์ Lorem Ipsum "
+"เป็นข้อความจำลองมาตรฐานของอุตสาหกรรมนับตั้งแต่ค.ศ. 1500 "
+"เมื่อเครื่องพิมพ์ที่ไม่รู้จักนำถังประเภทหนึ่งมาและแย่งชิงไปทำหนังสือตัวอย่างประเภท "
+"มันรอดมาได้ไม่เพียงแค่ห้าศตวรรษแต่ยังก้าวกระโดดสู่การเรียงพิมพ์อิเล็กทรอนิกส์"
+
+#: landing/templates/index.html:67
+msgid "Help we know what you want?"
+msgstr "ช่วยบอกให้เรารู้ ว่าคุณต้องการอะไร?"
+
+#: landing/templates/index.html:76
+msgid "Find Data"
+msgstr "ค้นหาข้อมูล"
+
+#: landing/templates/index.html:88
+msgid "Explore"
+msgstr "สำรวจ"
+
+#: landing/templates/index.html:100
+msgid "Find Skill"
+msgstr "ค้นหาสกิล"
+
+#: landing/templates/knowledge.html:5
+msgid "Explore our Data Governance Platform"
+msgstr "สำรวจแพลตฟอร์มการกำกับดูแลข้อมูลของเรา"
+
+#: landing/templates/knowledge.html:17
+msgid "Find More Governance Platform"
+msgstr "ค้นหาแพลตฟอร์มการกำกับดูแลเพิ่มเติม"
+
+#: landing/templates/knowledge.html:20
+msgid "Explore our Knowledge Graph"
+msgstr "สำรวจกราฟความรู้ของเรา"
+
+#: landing/templates/knowledge.html:31
+msgid "Find more Knowledge Graph"
+msgstr "ค้นหากราฟความรู้เพิ่มเติม"
+
+#: landing/templates/layout.html:79 landing/templates/layout.html:119
+#: landing/templates/layout.html:121 landing/templates/layout.html:185
+#: landing/templates/newsDetail.html:12
+msgid "Home"
+msgstr "หน้าหลัก"
+
+#: landing/templates/layout.html:84 landing/templates/layout.html:189
+msgid "Knowledge"
+msgstr "กราฟ"
+
+#: landing/templates/layout.html:84 landing/templates/layout.html:189
+msgid "Graph"
+msgstr "ความรู้"
+
+#: landing/templates/layout.html:88 landing/templates/layout.html:193
+msgid "Data"
+msgstr "ข้อมูล"
+
+#: landing/templates/layout.html:88 landing/templates/layout.html:193
+msgid "Discovery"
+msgstr ""
+
+#: landing/templates/layout.html:93 landing/templates/layout.html:198
+msgid "Workflow"
+msgstr "เวิร์กโฟลว์"
+
+#: landing/templates/layout.html:97 landing/templates/layout.html:202
+msgid "Superset"
+msgstr "Superset"
+
+#: landing/templates/layout.html:126 landing/templates/layout.html:128
+#: landing/templates/news.html:22
+msgid "News"
+msgstr "ข่าวสาร"
+
+#: landing/templates/layout.html:133 landing/templates/layout.html:135
+msgid "Knowledge Graph"
+msgstr "กราฟความรู้"
+
+#: landing/templates/layout.html:141 landing/templates/layout.html:143
+msgid "+Add News"
+msgstr "+เพิ่มข่าว"
+
+#: landing/templates/layout.html:150
+msgid "English"
+msgstr "ภาษาไทย"
+
+#: landing/templates/layout.html:219
+msgid "Logout"
+msgstr "ออกจากระบบ"
+
+#: landing/templates/layout.html:225 landing/templates/layout.html:227
+msgid "Login/Sign Up"
+msgstr "ลงชื่อเข้าใช้/ลงทะเบียน"
+
+#: landing/templates/loginForm.html:20 landing/templates/loginForm.html:34
+msgid "Login"
+msgstr "ลงชื่อเข้าใช้"
+
+#: landing/templates/loginForm.html:23
+msgid "Username"
+msgstr "ชื่อผู้ใช้"
+
+#: landing/templates/loginForm.html:29
+msgid "Password"
+msgstr "พาสเวิร์ด"
+
+#: landing/templates/loginForm.html:38
+#, fuzzy
+#| msgid "No a member?"
+msgid "Not a member?"
+msgstr "ยังไม่ลงทะเบียน?"
+
+#: landing/templates/loginForm.html:39
+msgid "Sign Up"
+msgstr "ลงทะเบียน"
+
+#: landing/templates/newsDetail.html:13
+msgid "News Zone"
+msgstr "หน้าข่าวสาร"
+
+#~ msgid "Social Media"
+#~ msgstr "โซเชี่ยลมีเดีย"
+
+#, fuzzy
+#~| msgid ""
+#~| "Lorem Ipsum is simply dummy text of the printing and typesetting "
+#~| "industry. Lorem Ipsum has been the industry's standard dummy text ever "
+#~| "since the 1500s, when an unknown printer took a galley of type and "
+#~| "scrambled it to make a type specimen book. It has survived not only five "
+#~| "centuries, but also the leap into electronic typesetting."
+#~ msgid ""
+#~ "Lorem Ipsum is simply dummy text of the printing and typesetting "
+#~ "industry. Lorem Ipsum has been the industry's standard dummy text ever "
+#~ "since the 1500s, when an unknown printer took a galley of type and "
+#~ "scrambled it to make a type specimen book. It has survived not only five "
+#~ "centuries, but also the leap into electronic typesetting, remaining "
+#~ "essentially unchanged."
+#~ msgstr ""
+#~ "เป็นเพียงข้อความจำลองของอุตสาหกรรมการพิมพ์และการเรียงพิมพ์ Lorem Ipsum "
+#~ "เป็นข้อความจำลองมาตรฐานของอุตสาหกรรมนับตั้งแต่ค.ศ. 1500 "
+#~ "เมื่อเครื่องพิมพ์ที่ไม่รู้จักนำถังประเภทหนึ่งมาและแย่งชิงไปทำหนังสือตัวอย่างประเภท "
+#~ "มันรอดมาได้ไม่เพียงแค่ห้าศตวรรษแต่ยังก้าวกระโดดสู่การเรียงพิมพ์อิเล็กทรอนิกส์"
+
+#~ msgid "Explore Knowledge Graph"
+#~ msgstr "สำรวจกราฟความรู้"
+
+#~ msgid "Language"
+#~ msgstr "ภาษา"
+
+#~ msgid "Data Zone"
+#~ msgstr "โซนข้อมูล"

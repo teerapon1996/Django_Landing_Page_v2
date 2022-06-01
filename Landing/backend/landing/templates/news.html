@@ -1,0 +1,57 @@
+{% extends 'layout.html' %} {% load static %} {% block content %}{% load i18n %}
+
+<div class="header-news" align="center">
+
+  <img class="bg-orange-news" align="Center" alt="econ" src="{% static 'images_home/BG - Header - Orange.png' %}">
+
+  <img class="bg-head-news" align="Center" alt="econ" src="{% static 'images_home/BG - Header - Blue.png' %}">
+  <div class="word-news">
+    <div class="centered-top word-head-news"> News</div>
+  </div>
+</div>
+
+{% if messages %}
+<div class="alert alert-success" role="alert">
+  {% for message in messages %}
+  <b>{{message}}</b>
+  {% endfor %}
+</div>
+{% endif %}
+<div class="container" align="center">
+  <br><br>
+  <h3 align="left">{% trans "News" %}</h3>
+  <br>
+  <div class="top-news">
+    <img class="img-top-news" align="Center" alt="econ" src="{{last_news.image.url}}">
+    <h3 class="word-top-news">{{last_news.title|truncatechars:30}}</h3>
+    <p class="time-top-news">Time : {{last_news.created}}</p>
+  </div>
+  <br><br>
+  {% if newss %}{% for news in newss %}
+
+  <div class="card_news">
+    <div class="card-img" style="background-image:url({{news.image.url}});">
+      <div class="overlay">
+        <div class="overlay-content">
+          <a data-news="{{ news.id }}"  class="hover" href="{% url 'newsDetail' news.id %}">{% trans "View News" %}</a>
+        </div>
+      </div>
+    </div>
+    <div class="card-content">
+      <a href="{% url 'newsDetail' news.id %}">
+        <h2>{{ news.title }}</h2>
+        <p class= "desc-news">{{ news.descriptions|safe|truncatechars:50 }}</p>
+      </a>
+      <img class="bg-w-o-read-more" src="{% static 'images_home/BG - News - WhiteOrange.png' %}" alt="more" />
+      <a href="{% url 'newsDetail' news.id %}"> <p class="word-read-more">อ่านเพิ่มเติม <img class="icon-next" src="{% static "images_home/Icon - Next - White.png"%}" alt="next"></p> </a>
+    </div>
+  </div>
+  {% endfor %} {% else %}
+  <h1 align="Center"><i lass="ii fas fa-circle-xmark icon-x"></i>{% trans "  404 Not Found, not any news. Please try add data news." %}</h1>
+  <br /><br />
+  {% endif %}
+  <br><br>
+</div>
+<br><br>
+{% include "footer.html" %}
+{% endblock %}

@@ -1,0 +1,46 @@
+{% load static %}
+{% load i18n %}
+<div class="containers">
+  <img align="Center" 
+    id = "footer-img-orange"
+    style="
+      left:0px;
+      width: 100%;
+      height:calc(50px + (300 - 50 ) * ((100vw - 100px) / (1920 - 100)));
+      z-index:-4;
+      object-fit:fill;
+      z-index:-1;
+      position: absolute;"
+    alt="econ" 
+    src="{% static 'images_home/BG - Footer - Orange.png' %}">
+    
+    <img
+      align="Center"
+      style="
+        max-width: 100%;
+        width: 100vw;
+        height:calc(100px + (400 - 10 ) * ((100vw - 100px) / (1920 - 100)));
+        object-fit: cover; 
+        object-position: 100% 0;
+      "
+      alt="footer_econ_news"
+      src="{% static 'images_home/BG - Footer.png' %}"
+    />
+  
+    <div
+      class="centered"
+      style="
+        color: white;
+        top: 45%;
+        font-size: calc(12px + (30 - 12) * ((100vw - 300px) / (1920 - 300)));
+      "
+    >
+      {% trans "Contact Us" %}
+    </div>
+  
+    <a
+      class="btn fab fa-facebook"
+      style="left: 50%; top: 65%"
+      href="https://web.facebook.com/ECONTUofficial/?_rdc=1&_rdr"
+    ></a>
+</div>

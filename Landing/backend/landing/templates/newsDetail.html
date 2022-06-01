@@ -1,0 +1,28 @@
+{% extends 'layout.html' %} {% load static %} {% block content %}{% load i18n %}
+<div class="container head-detail-news">
+  <br /><br />
+  <i class="fa fa-home"></i>
+  <a class="path-link" href="{% url 'index' %}">{% trans "Home" %}</a> /
+  <a class="path-link" href="{% url 'news' %}">{% trans "News Zone" %}</a> /
+  <a class="path-link-news" href="{% url 'newsDetail' news.id %}">{{ news.title }}</a>
+
+  <br /><br />
+  <div class="container detail-news" align="center">
+    <h1 class="word-title-news">{{ news.title }}</h1>
+    <br>
+    <img
+      class="img-detail-news"
+      src="{{ news.image.url }}"
+      alt="{{ news.name }}"/>
+  </div>
+</div>
+<div class="container detail-desc">
+  <br>
+  <span class="detail-time" align="left" style="color: rgb(144, 144, 144)">{{ news.created }}</span>
+  <br>
+  <p class="desc-detail-news" align="left">{{ news.descriptions |safe }}</p>
+  <br /><br>
+</div>
+
+{% include "footer.html" %}
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'layout.html' %} {% load static %} {% block content %}{% load i18n %}
+<div class="container head-knowledge" align="center">
+  <br><br>
+  <div class="container">
+    <h3 align="left">{% trans "Explore our Data Governance Platform" %}</h3>
+    <p class="word-govern" align="left">
+    {% trans "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting." %}
+   </p>
+  <img
+    class="img-govern"
+    align="Center"   
+    alt="footer_econ"
+    src="{% static 'images/klg.png' %}"
+  />
+  <br /><br />
+  <button class="btn text-white btn-govern">
+    {% trans "Find More Governance Platform" %}
+  </button>
+  <br /><br />
+  <h3 align="left">{% trans "Explore our Knowledge Graph" %}</h3>
+  <p class="word-klg" align="left">
+    {% trans "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting." %}
+  </p>
+  <img
+    class="img-klg"
+    align="Center"
+    alt="footer_econ"
+    src="{% static 'images/data.png' %}"
+  /><br /><br />
+  <button class="btn text-white btn-klg">
+    {% trans "Find more Knowledge Graph" %}
+  </button>
+  <br /><br /><br />
+</div>
+</div>
+{% include "footer.html" %}
+{% endblock %}
